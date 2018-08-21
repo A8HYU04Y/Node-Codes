@@ -35,7 +35,7 @@ axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${ar.addres
    console.log("Current Temperature : ");
    if(ar.t==='C'){
     const tem =Math.round((response.data.currently.temperature -32)*0.5555556);
-    console.log(tem+" " + "C");}
+    console.log(tem+" \u00B0" + "C");}
     else
     console.log(response.data.currently.temperature+" F" );
 })
