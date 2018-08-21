@@ -4,7 +4,7 @@
 1. -a or --address flag for address
 ```sh
 $ cd weather
-$ node index.js -a Sycamore Valley Ranch Los Olivos California 
+$ node index.js -a "Sycamore Valley Ranch Los Olivos California" 
 ```
 2. for temperature unit 
 
@@ -12,7 +12,7 @@ $ node index.js -a Sycamore Valley Ranch Los Olivos California
 
 ```sh
 $ cd weather
-$ node index.js -a Sycamore valley Ranch Los Olivos California -t C 
+$ node index.js -a "Sycamore valley Ranch Los Olivos California" -t C 
 ```
 
 b: default Fahrenheit
@@ -20,5 +20,5 @@ b: default Fahrenheit
 ``` sh
 
 $ cd weather
-$ node index.js -a Sycamore Valley Ranch Los Olivos Clifornia  
+$ node index.js -a "Sycamore Valley Ranch Los Olivos California"  
 ```
