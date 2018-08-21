@@ -8,14 +8,14 @@ $ node index.js -a Sycamore Valley Ranch Los Olivos California
 ```
 2. for temperature unit 
 
-a:for celcius 
+ a : for celcius 
 
 ```sh
 $ cd weather
 $ node index.js -a Sycamore valley Ranch Los Olivos California -t C 
 ```
 
-b: default F
+b: default Fahrenheit
 
 ``` sh
 
