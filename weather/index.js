@@ -11,7 +11,7 @@ const ar=yargs
         description:"address"   
     },
     temp:{
-        description:"unit of temp",
+        description:"unit for temperature",
         alias:"t",
         string:true
     }
