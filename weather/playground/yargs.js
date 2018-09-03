@@ -3,7 +3,7 @@ const axios=require('axios');
 //const argv=yargs.argv;
 //const prc =process.argv;
 //console.log("yargs : ",argv.body); //{ _:[cmd] ,flag:[data] }
-const ar=yargs
+const arg=yargs
 .options({
     address:{
         demand:true,
@@ -18,7 +18,7 @@ const ar=yargs
 })
 .help()
 .argv;
-axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${ar.address}`)
+axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${arg.address}`)
 .then((response)=>{
     const lat=response.data.results[0].geometry.location.lat;
     const lng=response.data.results[0].geometry.location.lng;
@@ -28,7 +28,7 @@ axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${ar.addres
 })
 .then((response)=>{
    console.log("Current Temperature : ");
-   if(ar.t=='C'){
+   if(arg.t=='C'){
     const tem =(response.data.currently.temperature -32)*0.55;
     console.log(tem+" C");}
     else
