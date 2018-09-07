@@ -22,7 +22,8 @@ axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${ar.addres
 .then((response)=>{
     if(response.data.status==="ZERO_RESULTS"){
         throw new Error("Address Not Found");
-        
+    if(response.data.status==="OVER_QUERY_LIMIT")
+        throw new Error("API QUOTA EXCEEDED !!!")
     }
     
     const lat=response.data.results[0].geometry.location.lat;
