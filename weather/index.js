@@ -18,7 +18,8 @@ const ar=yargs
 })
 .help()
 .argv;
-axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${ar.address}`)
+var URIcomponent =encodeURIComponent(ar.address);
+axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${URIcomponent}`)
 .then((response)=>{
     if(response.data.status==="ZERO_RESULTS"){
         throw new Error("Address Not Found");
