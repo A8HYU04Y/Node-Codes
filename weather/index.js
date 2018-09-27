@@ -7,7 +7,7 @@ const ar=yargs
 .options({
     address:{
         demand:true,
-        alias:'a',
+        alias:'add',
         description:"address"   
     },
     temp:{
